@@ -1,8 +1,10 @@
 package ModuleOne;
 
+import java.util.*;
 public class PyramidPattern {
     public static void main(String[] args) {
-        int row=4;
+        Scanner sc=new Scanner(System.in);
+        int row=sc.nextInt();
         
         int spaces;
         for(int i=1;i<=row;i++){
