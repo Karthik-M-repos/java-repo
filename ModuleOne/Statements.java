@@ -1,3 +1,5 @@
+package ModuleOne;
+
 public class Statements {
 
     public static int generateRandom(){
