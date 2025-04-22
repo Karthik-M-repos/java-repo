@@ -6,14 +6,16 @@ public class DiamondPattern {
         generatePattern();
     }
     public static void generatePattern(){
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of rows:");
-        int i , j , n , spaces = 0;
+        int i, j, n, spaces = 0;
         int rows = sc.nextInt();
         char character = '*';
+
+        //Upper part
         for(i = 1; i <= rows; i++){
           n = (2*rows-1) - spaces;
-          for(j = 1; j <= n/2 ; j++){
+          for(j = 1; j <= n / 2; j++){
             System.out.print(character);
           }
           for(int m = 0; m < spaces; m++){
@@ -25,8 +27,10 @@ public class DiamondPattern {
           System.out.println();
           spaces = 2 * i - 1;
         }
+
+        //Lower part
         spaces -= 2;
-        for(i = 2; i <= rows;i++){
+        for(i = 2; i <= rows; i++){
             spaces -= 2;
             if(spaces < 0){
                 spaces = 0;
